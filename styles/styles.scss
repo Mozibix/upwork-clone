@@ -63,13 +63,45 @@ main {
 
   .hero {
     &_sec {
-      border: 1px solid red;
-
       &_inner {
         padding: 0 2rem;
-        @media (min-width: 992px) {
-          padding: 0 10rem;
+        @media (min-width: 1200px) {
+          padding: 3rem 9rem;
         }
+      }
+    }
+
+    &_left {
+      width: fit-content;
+      .getting_started {
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &_big_text {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: $primary;
+      line-height: normal;
+
+      @media (min-width: 992px) {
+        line-height: 4rem;
+        font-size: 5rem;
+      }
+    }
+
+    &_small_text {
+      font-size: 1.2rem;
+      line-height: normal;
+      width: 100%;
+      font-weight: 600;
+      max-width: 35rem;
+      @media (min-width: 992px) {
+        font-size: 1.5rem;
       }
     }
 
@@ -77,9 +109,55 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
+
       img {
+        width: 100%;
+
         @media (min-width: 992px) {
-          width: 27rem;
+          max-width: 30rem;
+        }
+      }
+    }
+  }
+}
+
+.up_game {
+  &_sec {
+    &_inner {
+      padding: 2rem;
+      @media (min-width: 1200px) {
+        padding: 3rem 9rem;
+      }
+    }
+  }
+
+  &_left {
+    img {
+      max-width: 100%;
+      height: 100%;
+      @media (min-width: 992px) {
+        height: 30rem;
+      }
+    }
+  }
+
+  &_right {
+    &_inner {
+      padding-top: 0.5rem;
+      h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: normal;
+
+        @media (min-width: 992px) {
+          font-weight: 800;
+          font-size: 2.5rem;
+        }
+      }
+      ul {
+        p {
+          width: 100%;
+          max-width: fit-content;
         }
       }
     }
